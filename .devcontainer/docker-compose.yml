@@ -1,0 +1,15 @@
+services:
+  app:
+    build:
+      context: ..
+      dockerfile: .devcontainer/Dockerfile
+      target: ${ENVIRONMENT}
+    volumes:
+      - ..:/code
+    ports:
+      - "80:80"
+    container_name: ${CONTAINER_NAME}
+    entrypoint: ["sh", "/code/src/entrypoint.sh"]
+
+  redis:
+    image: redis:alpine
