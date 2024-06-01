@@ -2,11 +2,18 @@
 
 _The development environment will install Jupyter Notebook and Oh My Zsh with plugins, theme with customize Zsh prompt_
 
+_**This project based on ubuntu:22.04 AS base**_
+
 ### Usage: 
 ```sh
 # Start project and open the code container in VSCode:
 ./start_devcontainer.sh [Project Name] [Environment]
 "environment: development | dev | production | prod"
+
+# If the container is running, use this command to open it in VSCode:
+./vscode.sh [Project Name]
+./vscode.sh 
+# the default Project Name is the folder name
 
 # Stopping the Services:
 project_name=webapp
